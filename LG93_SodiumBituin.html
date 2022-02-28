@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bituin - LG 9.3 4th Non-Graded Exercise</title>
+
+	<meta charset="UTF-8">
+	<meta name="author" content="Alyssa Bituin">
+	<meta name="keywords" content="function outputs">
+	<meta name="revised" content="28-02-2022">
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+        function getAverage(a, b) {
+            let avg = (a + b) / 2;
+            document.getElementById("div1").innerHTML = avg;
+        }
+
+        function checkInterval(a, b, c) {
+            if (((a<=c) && (c<=b)) || ((b<=c) && (c<=a))) {
+                document.getElementById("div2").innerHTML = "TRUE";
+            }
+            else {
+                document.getElementById("div2").innerHTML = "FALSE";
+            }   
+        }
+
+        function inputNumber() {
+            let number = prompt("Enter a number", 0);
+            return parseInt(number);
+        }
+
+        x = inputNumber();
+        y = inputNumber();
+        getAverage(x,y);
+        z = inputNumber();
+        checkInterval(x, y, z);
+    </script>
+</body>
+</html>
